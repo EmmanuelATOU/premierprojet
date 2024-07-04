@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Licorne.com - Location de Licornes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f8ff;
+        }
+        header {
+            background-color: #ff69b4;
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #ff1493;
+        }
+        nav a {
+            padding: 14px 20px;
+            display: block;
+            color: white;
+            text-decoration: none;
+        }
+        nav a:hover {
+            background-color: #ff69b4;
+        }
+        .content {
+            display: none;
+            padding: 20px;
+        }
+        .content.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Licorne.com</h1>
+        <p>Spécialiste de location de licornes</p>
+    </header>
+    <nav>
+        <a href="#services" onclick="showContent('services')">Nos services</a>
+        <a href="#tarifs" onclick="showContent('tarifs')">Nos tarifs</a>
+        <a href="#contact" onclick="showContent('contact')">Nous contacter</a>
+    </nav>
+    <div id="services" class="content active">
+        <h2>Nos services</h2>
+        <p>Découvrez nos services de location de licornes pour tous vos événements spéciaux. Nous proposons des licornes pour les fêtes d'anniversaire, les mariages, les événements corporatifs, et bien plus encore.</p>
+    </div>
+    <div id="tarifs" class="content">
+        <h2>Nos tarifs</h2>
+        <p>Nos tarifs sont compétitifs et varient en fonction de la durée de location et du type d'événement. Contactez-nous pour un devis personnalisé.</p>
+    </div>
+    <div id="contact" class="content">
+        <h2>Nous contacter</h2>
+        <p>Pour toute demande de renseignement ou pour réserver une licorne, vous pouvez nous contacter par email à contact@licorne.com ou par téléphone au 01 23 45 67 89.</p>
+    </div>
+    <script>
+        function showContent(id) {
+            const contents = document.querySelectorAll('.content');
+            contents.forEach(content => content.classList.remove('active'));
+            document.getElementById(id).classList.add('active');
+        }
+    </script>
+</body>
+</html>
